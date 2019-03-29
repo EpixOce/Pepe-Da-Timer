@@ -1,8 +1,16 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+
     setTimeout(function() {
-        message.reply("**Time to Search!** :3");
+        message.delete();
+    }, 30000)
+
+    setTimeout(async function() {
+        const r = await message.reply("**Time to search!** :3");
+        setTimeout(function() {
+            r.delete();
+        }, 30000)
     }, 61000)
 }
 
